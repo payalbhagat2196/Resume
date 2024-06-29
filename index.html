@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!--Rehistration and login page-->
+        <div id="auth-section" class="container">
+            <div class="form-toggle">
+                <button id="login-btn" class="toggle-btn">Login</button>
+                <button id="Register-btn" class="toggle-btn">Register</button>
+            </div>
+            <form id="login-form" class="form">
+                <h2>Login</h2>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Login</button>
+            </form>
+            <form id="register-form" class="form-hidden">
+                <h2>Register</h2>
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm password">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <!--Profile Management section-->
+        <div id="profile-section" class="hidden">
+            <h2>Profile Management</h2>
+            <form id="profile-form" class="form">
+                <label for="name">Name</label>
+                <input type="name" id="name" required>
+                <label for="email" class="profile-email">Email</label>
+                <input type="email" id="profile-email" required>
+                <button type="submit">Save Profile</button>
+            </form>
+        </div>
+        <!--Template Selection Sector-->
+        <div id="template section" class="hidden">
+            <h2>Select Template</h2>
+            <div class="Template">
+                <button class="template-btn" data-template="1">Template 1</button>
+                <button class="template-btn" data-template="1">Template 2</button>
+            </div>
+        </div>
+        <!--Resume Section-->
+        <div id="resume-section" class="hidden">
+            <h2>Resume</h2>
+            <form id="resume-form" class="form">
+                <label for="experience">Experience:</label>
+                <textarea id="experience" required></textarea>
+                <button type="submit">Save Resume</button>
+            </form>
+        </div>
+        <!--Real-Time Preview Section-->
+        <h2>Resume Preview</h2>
+    <div id="resume-preview">
+            <!-- Real-time preview will be updated here -->
+        </div>
+        <button id="export-btn">Export as PDF</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
